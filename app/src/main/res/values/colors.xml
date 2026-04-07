@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Warna untuk tampilan login -->
+    <color name="login_title">#FF000000</color>
+    <color name="login_label">#FF666666</color>
+    <color name="login_button">#FFFF8383</color>  <!-- Warna tombol login  -->
+    <color name="login_button_text">#FFFFFFFF</color>
+    <color name="login_hint">#FF999999</color>
+    <color name="login_text">#FF333333</color>
+    <color name="login_background">#FFFFFFFF</color>
 </resources>
