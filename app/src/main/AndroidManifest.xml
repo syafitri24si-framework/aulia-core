@@ -11,21 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Auliacore">
-        <activity
-            android:name=".bg_gradient"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan3.WelcomeActivity"
-            android:exported="false" />
+
+        <!-- LOGIN (LAUNCHER) -->
         <activity
             android:name=".pertemuan3.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- WELCOME -->
+        <activity
+            android:name=".pertemuan3.WelcomeActivity"
+            android:exported="false" />
+
+        <!-- HALAMAN RUMUS -->
+        <activity
+            android:name=".pertemuan_2.SecondActivity"
+            android:exported="false" />
+
+        <!-- CUSTOM 1 -->
+        <activity
+            android:name=".pertemuan4.DailyGlowActivity"
+            android:exported="false" />
+
+        <!-- CUSTOM 2 -->
+        <activity
+            android:name=".pertemuan4.PinkMotivationActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

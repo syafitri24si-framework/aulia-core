@@ -1,11 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Warna untuk tampilan login -->
+
+    <!-- ========================= -->
+    <!-- PRIMARY THEME (PINK) -->
+    <!-- ========================= -->
+    <color name="primary_pink">#FF8383</color>
+    <color name="primary_pink_dark">#FF5C5C</color>
+    <color name="primary_pink_light">#FFB6C1</color>
+    <color name="primary_pink_soft">#FFE4E1</color>
+
+    <!-- ========================= -->
+    <!-- BACKGROUND -->
+    <!-- ========================= -->
+    <color name="background_main">#FFFFFFFF</color>
+    <color name="background_soft">#FFFDF6F6</color>
+    <color name="background_gradient_start">#FFFFE4E1</color>
+    <color name="background_gradient_end">#FFFFC1CC</color>
+
+    <!-- ========================= -->
+    <!-- TEXT -->
+    <!-- ========================= -->
+    <color name="text_primary">#FF333333</color>
+    <color name="text_secondary">#FF666666</color>
+    <color name="text_hint">#FF999999</color>
+    <color name="text_white">#FFFFFFFF</color>
+
+    <!-- ========================= -->
+    <!-- BUTTON -->
+    <!-- ========================= -->
+    <color name="button_primary">#FFFF8383</color>
+    <color name="button_secondary">#FFFFA6C9</color>
+    <color name="button_text">#FFFFFFFF</color>
+
+    <!-- ========================= -->
+    <!-- CARD / UI -->
+    <!-- ========================= -->
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_shadow">#1A000000</color>
+
+    <!-- ========================= -->
+    <!-- LOGIN (BIAR TETAP KOMPATIBEL) -->
+    <!-- ========================= -->
     <color name="login_title">#FF000000</color>
     <color name="login_label">#FF666666</color>
-    <color name="login_button">#FFFF8383</color>  <!-- Warna tombol login  -->
+    <color name="login_button">#FFFF8383</color>
     <color name="login_button_text">#FFFFFFFF</color>
     <color name="login_hint">#FF999999</color>
     <color name="login_text">#FF333333</color>
     <color name="login_background">#FFFFFFFF</color>
+
 </resources>
