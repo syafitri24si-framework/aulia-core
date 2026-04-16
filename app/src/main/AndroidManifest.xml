@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,38 +10,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Auliacore">
+        android:theme="@style/Theme.Auliacore"><activity
+            android:name=".pertemuan5.FifthActivity"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        <!-- LOGIN (LAUNCHER) -->
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".pertemuan5.WebViewActivity"
+            android:exported="false" /> <!-- LOGIN (LAUNCHER) -->
         <activity
             android:name=".pertemuan3.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-        <!-- WELCOME -->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity> &lt;!&ndash; WELCOME &ndash;&gt;-->
         <activity
             android:name=".pertemuan3.WelcomeActivity"
-            android:exported="false" />
-
-        <!-- HALAMAN RUMUS -->
+            android:exported="false" /> <!-- HALAMAN RUMUS -->
         <activity
             android:name=".pertemuan_2.SecondActivity"
-            android:exported="false" />
-
-        <!-- CUSTOM 1 -->
+            android:exported="false" /> <!-- CUSTOM 1 -->
         <activity
             android:name=".pertemuan4.DailyGlowActivity"
-            android:exported="false" />
-
-        <!-- CUSTOM 2 -->
+            android:exported="false" /> <!-- CUSTOM 2 -->
         <activity
             android:name=".pertemuan4.PinkMotivationActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
