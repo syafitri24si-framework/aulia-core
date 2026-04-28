@@ -7,9 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_gradient_start"
-    tools:context=".pertemuan4.PinkMotivationActivity">
+    tools:context=".pertemuan4.BlueMotivationActivity">
 
-    <!-- HEADER / BANNER -->
     <ImageView
         android:id="@+id/imgBanner"
         android:layout_width="0dp"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- CARD UTAMA -->
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -37,15 +35,12 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- JUDUL -->
-
-            <!-- DESKRIPSI -->
             <TextView
                 android:id="@+id/tvJudul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pink Motivation"
-                android:textColor="@color/primary_pink"
+                android:text="Blue Motivation"
+                android:textColor="@color/primary"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -53,18 +48,16 @@
                 android:id="@+id/tvDeskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Temukan semangat dan motivasi harianmu 💖"
+                android:text="Temukan semangat harimu dengan tenang 💙"
                 android:textColor="@color/text_secondary"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- GARIS PEMBATAS -->
             <View
                 android:layout_width="60dp"
                 android:layout_height="3dp"
-                android:background="@color/primary_pink"
+                android:background="@color/primary"
                 android:layout_marginBottom="20dp"/>
 
-            <!-- QUOTE (FOCUS UTAMA) -->
             <TextView
                 android:id="@+id/tvQuote"
                 android:layout_width="match_parent"
@@ -76,21 +69,18 @@
                 android:gravity="center"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- BOX MOTIVASI -->
             <TextView
                 android:id="@+id/tvExtra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kamu hebat 💖"
+                android:text="Kamu hebat 💙"
                 android:textSize="16sp"
                 android:textColor="@color/text_white"
-                android:background="@color/primary_pink_light"
+                android:background="@color/primary_light"
                 android:padding="12dp"
                 android:gravity="center"
                 android:layout_marginTop="8dp"/>
 
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

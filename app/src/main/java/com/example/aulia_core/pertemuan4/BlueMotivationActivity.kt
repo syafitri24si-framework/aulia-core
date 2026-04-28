@@ -8,12 +8,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aulia_core.R
 
-class PinkMotivationActivity : AppCompatActivity() {
+class BlueMotivationActivity : AppCompatActivity() { // Nama diubah ke Blue
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_pink_motivation)
+        setContentView(R.layout.activity_pink_motivation) // Tetap panggil layout yang ada
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -21,19 +21,14 @@ class PinkMotivationActivity : AppCompatActivity() {
             insets
         }
 
-        // =========================
-        // AMBIL DATA DARI WELCOME
-        // =========================
         val judul = intent.getStringExtra("judul")
         val deskripsi = intent.getStringExtra("deskripsi")
 
-        // =========================
-        // HUBUNGKAN KE TEXTVIEW
-        // =========================
         val tvJudul = findViewById<TextView>(R.id.tvJudul)
         val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsi)
 
-        tvJudul.text = judul
-        tvDeskripsi.text = deskripsi
+        // Set text dari intent atau default jika kosong
+        tvJudul.text = judul ?: "Blue Motivation"
+        tvDeskripsi.text = deskripsi ?: "Temukan semangat harimu dengan tenang 💙"
     }
 }

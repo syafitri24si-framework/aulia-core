@@ -2,11 +2,7 @@ package com.example.aulia_core.pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.aulia_core.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -16,40 +12,33 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge()
-
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Handle padding system
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
-            insets
-        }
-
-        // =========================
-        // LOGIN BUTTON
-        // =========================
         binding.btnLogin.setOnClickListener {
 
-            val username = binding.etUsername.text.toString().trim()
-            val password = binding.etPassword.text.toString().trim()
+            val username = binding.etUsername.text.toString()
+            val password = binding.etPassword.text.toString()
 
             if (username.isEmpty()) {
-                binding.etUsername.error = "Username wajib diisi"
+                binding.etUsername.error = "Isi username"
                 return@setOnClickListener
             }
 
             if (password.isEmpty()) {
-                binding.etPassword.error = "Password wajib diisi"
+                binding.etPassword.error = "Isi password"
                 return@setOnClickListener
             }
 
-            // PINDAH KE HALAMAN WELCOME
+            if (username != password) {
+                binding.etPassword.error = "Password harus sama dengan username"
+                return@setOnClickListener
+            }
+
             val intent = Intent(this, WelcomeActivity::class.java)
             intent.putExtra("USERNAME", username)
             startActivity(intent)
+            finish()
         }
     }
 }

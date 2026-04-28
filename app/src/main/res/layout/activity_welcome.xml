@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient_welcome"
+    android:background="@color/background_gradient_start"
     tools:context=".pertemuan3.WelcomeActivity">
 
     <ScrollView
@@ -22,11 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- Icon Success -->
             <ImageView
                 android:id="@+id/ivSuccess"
                 android:layout_width="100dp"
@@ -36,36 +34,32 @@
                 android:src="@drawable/ic_success"
                 android:contentDescription="Success" />
 
-            <!-- TextView Welcome (punyamu) -->
             <TextView
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome👋"
-                android:textColor="#333333"
+                android:textColor="@color/text_primary"
                 android:textSize="32sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
 
-            <!-- TextView Username (punyamu) -->
             <TextView
                 android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Username"
-                android:textColor="#FF8383"
+                android:textColor="@color/primary"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="24dp" />
 
-            <!-- Garis dekoratif -->
             <View
                 android:layout_width="60dp"
                 android:layout_height="3dp"
-                android:background="#FF8383"
+                android:background="@color/primary"
                 android:layout_marginBottom="32dp" />
 
-            <!-- Card Info Tambahan (Optional - tidak mengganggu kode Kotlinmu) -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="✨ Welcome Message"
-                        android:textColor="#FF8383"
+                        android:textColor="@color/primary"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
@@ -93,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="You have successfully logged in to your account."
-                        android:textColor="#666666"
+                        android:textColor="@color/text_secondary"
                         android:textSize="14sp"
                         android:lineSpacingExtra="4dp" />
 
@@ -107,7 +101,7 @@
                 android:layout_height="56dp"
                 android:text="Rumus Bangun Ruang"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#FFB6C1"
+                android:backgroundTint="@color/primary_light"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 app:cornerRadius="28dp"/>
@@ -118,7 +112,7 @@
                 android:layout_height="56dp"
                 android:text="Daily Glow"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#FFA6C9"
+                android:backgroundTint="@color/primary"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 app:cornerRadius="28dp"/>
@@ -127,26 +121,33 @@
                 android:id="@+id/btnMotivation"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="Pink Motivation"
+                android:text="Blue Motivation"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#FF8FB1"
+                android:backgroundTint="@color/primary_dark"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 app:cornerRadius="28dp"/>
 
-            <!-- Tombol Logout (Optional) -->
+            <Button
+                android:id="@+id/btnBinaDesa"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Bina Desa"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:backgroundTint="#FF8383"
+                android:backgroundTint="@color/accent"
                 android:text="Logout"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:cornerRadius="28dp" />
-
-
 
         </LinearLayout>
 
