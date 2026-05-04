@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_gradient_start"
-    tools:context=".pertemuan4.BlueMotivationActivity">
+    tools:context=".Home.pertemuan4.BlueMotivationActivity">
 
     <ImageView
         android:id="@+id/imgBanner"

@@ -1,12 +1,14 @@
 package com.example.aulia_core
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aulia_core.pertemuan3.LoginActivity
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,16 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
+            val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
+            val isLogin = sharedPref.getBoolean("isLogin", false)
+
+            if (isLogin) {
+                // Sudah login → langsung ke BaseActivity
+                startActivity(Intent(this, BaseActivity::class.java))
+            } else {
+                // Belum login → ke AuthActivity
+                startActivity(Intent(this, AuthActivity::class.java))
+            }
             finish()
         }, 2000)
     }

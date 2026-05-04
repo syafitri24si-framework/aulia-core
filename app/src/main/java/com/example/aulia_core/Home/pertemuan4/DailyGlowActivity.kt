@@ -1,4 +1,4 @@
-package com.example.aulia_core.pertemuan4
+package com.example.aulia_core.Home.pertemuan4
 
 import android.os.Bundle
 import android.widget.TextView
@@ -8,12 +8,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aulia_core.R
 
-class BlueMotivationActivity : AppCompatActivity() { // Nama diubah ke Blue
+class DailyGlowActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_pink_motivation) // Tetap panggil layout yang ada
+        setContentView(R.layout.activity_daily_glow)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -21,14 +21,19 @@ class BlueMotivationActivity : AppCompatActivity() { // Nama diubah ke Blue
             insets
         }
 
+        // =========================
+        // AMBIL DATA DARI WELCOME
+        // =========================
         val judul = intent.getStringExtra("judul")
         val deskripsi = intent.getStringExtra("deskripsi")
 
+        // =========================
+        // HUBUNGKAN KE TEXTVIEW
+        // =========================
         val tvJudul = findViewById<TextView>(R.id.tvJudul)
         val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsi)
 
-        // Set text dari intent atau default jika kosong
-        tvJudul.text = judul ?: "Blue Motivation"
-        tvDeskripsi.text = deskripsi ?: "Temukan semangat harimu dengan tenang 💙"
+        tvJudul.text = judul
+        tvDeskripsi.text = deskripsi
     }
 }

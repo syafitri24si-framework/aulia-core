@@ -1,4 +1,4 @@
-package com.example.aulia_core.pertemuan5
+package com.example.aulia_core.Home.pertemuan5
 
 import android.os.Bundle
 import android.webkit.WebView
@@ -12,17 +12,21 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
+        // Pakai web_View (sesuai dengan ID di layout kamu)
         val webView = findViewById<WebView>(R.id.web_View)
 
         webView.settings.javaScriptEnabled = true
         webView.settings.domStorageEnabled = true
-
         webView.webViewClient = WebViewClient()
-
         webView.loadUrl("https://2sic-aulia.alwaysdata.net/")
     }
 
     override fun onBackPressed() {
-        finishAffinity()
+        val webView = findViewById<WebView>(R.id.web_View)
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

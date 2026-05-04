@@ -6,7 +6,7 @@ import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.example.aulia_core.pertemuan5.WebViewActivity
+import com.example.aulia_core.Home.pertemuan5.WebViewActivity
 
 class MainActivity : AppCompatActivity() {
 

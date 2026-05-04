@@ -1,4 +1,4 @@
-package com.example.aulia_core.pertemuan_2
+package com.example.aulia_core.Home.pertemuan2
 
 import android.os.Bundle
 import android.widget.Button

@@ -1,13 +1,13 @@
-package com.example.aulia_core.pertemuan3
+package com.example.aulia_core.Home.pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aulia_core.Home.pertemuan2.SecondActivity
 import com.example.aulia_core.databinding.ActivityWelcomeBinding
-import com.example.aulia_core.pertemuan_2.SecondActivity
-import com.example.aulia_core.pertemuan4.DailyGlowActivity
-import com.example.aulia_core.pertemuan4.BlueMotivationActivity
-import com.example.aulia_core.pertemuan5.WebViewActivity
+import com.example.aulia_core.Home.pertemuan4.DailyGlowActivity
+import com.example.aulia_core.Home.pertemuan4.BlueMotivationActivity
+import com.example.aulia_core.Home.pertemuan5.WebViewActivity
 
 class WelcomeActivity : AppCompatActivity() {
 

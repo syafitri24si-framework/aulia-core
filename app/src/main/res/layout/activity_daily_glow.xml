@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient_welcome"
-    tools:context=".pertemuan4.DailyGlowActivity">
+    tools:context=".Home.pertemuan4.DailyGlowActivity">
 
     <!-- CARD UTAMA -->
     <androidx.cardview.widget.CardView

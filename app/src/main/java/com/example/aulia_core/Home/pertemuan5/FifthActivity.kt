@@ -1,4 +1,4 @@
-package com.example.aulia_core.pertemuan5
+package com.example.aulia_core.Home.pertemuan5
 
 import android.content.Intent
 import android.graphics.Color
@@ -7,7 +7,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.NestedScrollView
 import com.example.aulia_core.R
 import com.example.aulia_core.databinding.ActivityFifthBinding
 

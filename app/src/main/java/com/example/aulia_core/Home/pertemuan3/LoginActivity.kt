@@ -1,25 +1,26 @@
-package com.example.aulia_core
+package com.example.aulia_core.Home.pertemuan3
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aulia_core.databinding.ActivityAuthBinding
+import com.example.aulia_core.BaseActivity
+import com.example.aulia_core.databinding.ActivityLoginBinding
 
-class AuthActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAuthBinding
+class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAuthBinding.inflate(layoutInflater)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
-        binding.btnMasuk.setOnClickListener {
-            val username = binding.inputUsername.text.toString()
-            val password = binding.inputPassword.text.toString()
+        binding.btnLogin.setOnClickListener {
+            val username = binding.etUsername.text.toString()
+            val password = binding.etPassword.text.toString()
 
             if (username.isNotEmpty() && username == password) {
                 val editor = sharedPref.edit()
