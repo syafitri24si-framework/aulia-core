@@ -22,10 +22,14 @@
             </intent-filter>
         </activity>
 
-        <!-- AUTH LOGIN (satu untuk semua) -->
         <!-- AUTH LOGIN -->
         <activity
             android:name=".AuthActivity"
+            android:exported="false" />
+
+        <!-- REGISTRASI -->
+        <activity
+            android:name=".RegistrasiActivity"
             android:exported="false" />
 
         <!-- BASE ACTIVITY -->
@@ -54,4 +58,5 @@
             android:exported="false" />
 
     </application>
+
 </manifest>

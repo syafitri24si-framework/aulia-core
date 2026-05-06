@@ -28,7 +28,7 @@
                 android:id="@+id/ivProfilePhoto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/foto_profil"
+                android:src="@drawable/ic_profile"
             android:scaleType="centerCrop"
             android:contentDescription="Foto Profil" />
 

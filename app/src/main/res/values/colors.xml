@@ -52,7 +52,7 @@
     <color name="login_hint">#9E9E9E</color>
     <color name="login_text">#1A1A1A</color>
     <color name="login_background">#FFFFFF</color>
-
+    <color name="error_red">#FF0000</color>
     <!-- ========================= -->
     <!-- BASIC -->
     <!-- ========================= -->

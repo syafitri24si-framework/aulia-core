@@ -17,22 +17,54 @@ class AuthActivity : AppCompatActivity() {
 
         val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
+        // Tombol Login
         binding.btnMasuk.setOnClickListener {
-            val username = binding.inputUsername.text.toString()
-            val password = binding.inputPassword.text.toString()
+            val username = binding.inputUsername.text.toString().trim()
+            val password = binding.inputPassword.text.toString().trim()
 
-            if (username.isNotEmpty() && username == password) {
+            // Ambil data dari SharedPreferences (hasil registrasi)
+            val savedUsername = sharedPref.getString("username", "")
+            val savedPassword = sharedPref.getString("password", "")
+
+            // 🔵 VALIDASI LOGIN dengan 2 RULE
+            val isValid = when {
+                // Rule 1: Username kosong atau Password kosong
+                username.isEmpty() || password.isEmpty() -> {
+                    Toast.makeText(this, "Username dan Password tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                // Rule 2: Username = Password (seperti praktikum)
+                username == password -> {
+                    Toast.makeText(this, "Login Berhasil (Username = Password)!", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                // Rule 3: Username dan Password cocok dengan data registrasi
+                username == savedUsername && password == savedPassword -> {
+                    Toast.makeText(this, "Login Berhasil! Selamat datang $username", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                // Rule 4: Data tidak cocok
+                else -> {
+                    Toast.makeText(this, "Username atau Password salah!", Toast.LENGTH_SHORT).show()
+                    false
+                }
+            }
+
+            if (isValid) {
+                // Simpan status login
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
-                editor.putString("username", username)
+                editor.putString("username_login", username)
                 editor.apply()
 
-                Toast.makeText(this, "Login Berhasil, Halo $username!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, BaseActivity::class.java))
                 finish()
-            } else {
-                Toast.makeText(this, "Username & Password harus sama!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Tombol ke halaman Registrasi
+        binding.tvDaftarSekarang.setOnClickListener {
+            startActivity(Intent(this, RegistrasiActivity::class.java))
         }
     }
 }
