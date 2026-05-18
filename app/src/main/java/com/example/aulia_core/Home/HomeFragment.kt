@@ -14,6 +14,7 @@ import com.example.aulia_core.Home.pertemuan4.BlueMotivationActivity
 import com.example.aulia_core.Home.pertemuan4.DailyGlowActivity
 import com.example.aulia_core.Home.pertemuan5.WebViewActivity
 import com.example.aulia_core.Home.pertemuan7.SeventhActivity
+import com.example.aulia_core.Home.pertemuan9.NinthActivity  // ← TAMBAHKAN IMPORT INI
 import com.example.aulia_core.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -38,7 +39,7 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), SecondActivity::class.java))
         }
 
-        // Button 2: Rumus Bangun Ruang (dari WelcomeActivity)
+        // Button 2: Rumus Bangun Ruang
         binding.btnRumus.setOnClickListener {
             startActivity(Intent(requireContext(), SecondActivity::class.java))
         }
@@ -62,6 +63,13 @@ class HomeFragment : Fragment() {
         binding.btnPertemuan7.setOnClickListener {
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
         }
+
+        // ==================== TAMBAHKAN INI ====================
+        // Button 7: Pertemuan 9
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+        // =======================================================
 
         // Logout
         binding.btnLogout.setOnClickListener {

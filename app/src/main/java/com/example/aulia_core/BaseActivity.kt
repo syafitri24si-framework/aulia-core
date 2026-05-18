@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.aulia_core.About.AboutFragment
 import com.example.aulia_core.Home.HomeFragment
+import com.example.aulia_core.Layanan.LayananFragment  // ← IMPORT INI
 import com.example.aulia_core.Profile.ProfileFragment
 import com.example.aulia_core.databinding.ActivityBaseBinding
 
@@ -33,6 +34,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
+                    true
+                }
+                R.id.layanan -> {  // ← TAMBAHKAN CASE INI (ID = layanan)
+                    replaceFragment(LayananFragment())
                     true
                 }
                 else -> false

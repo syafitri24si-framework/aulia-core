@@ -64,12 +64,12 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Menu Buttons in Grid 2x3 -->
+        <!-- Menu Buttons in Grid 2x4 (sekarang 8 card = 2 baris x 4 kolom) -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="3"
+            android:rowCount="4"
             android:layout_marginBottom="24dp">
 
             <!-- Card 1: Hitung Bangun Ruang -->
@@ -114,7 +114,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Card 2: Rumus Bangun Ruang (dari WelcomeActivity) -->
+            <!-- Card 2: Rumus Bangun Ruang -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="120dp"
@@ -321,6 +321,67 @@
                         android:layout_marginTop="8dp"
                         android:layout_width="60dp"
                         android:layout_height="32dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 7: Pertemuan 9 (BARU) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎨"
+                        android:textSize="32dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pertemuan 9"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnPertemuan9"
+                        style="@style/ModernButtonSmall"
+                        android:text="P9"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="60dp"
+                        android:layout_height="32dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 8: Placeholder (opsional, untuk menjaga grid tetap rapi) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
