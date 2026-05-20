@@ -64,7 +64,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Menu Buttons in Grid 2x4 (sekarang 8 card = 2 baris x 4 kolom) -->
+        <!-- Menu Buttons in Grid -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -324,7 +324,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Card 7: Pertemuan 9 (BARU) -->
+            <!-- Card 7: Pertemuan 9 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="120dp"
@@ -366,15 +366,15 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Card 8: Placeholder (opsional, untuk menjaga grid tetap rapi) -->
+            <!-- Card 8: Pertemuan 10 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="6dp"
-                android:visibility="invisible"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="0dp">
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card_background">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -382,10 +382,34 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📑"
+                        android:textSize="32dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pertemuan 10"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnToTenth"
+                        style="@style/ModernButtonSmall"
+                        android:text="P10"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="60dp"
+                        android:layout_height="32dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-        </GridLayout>
+        </GridLayout>  <!-- ← INI YANG DITAMBAHKAN (penutup GridLayout) -->
 
         <!-- Logout Section -->
         <androidx.cardview.widget.CardView

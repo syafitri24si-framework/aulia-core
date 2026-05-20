@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.aulia_core.AuthActivity
+import com.example.aulia_core.Home.pertemuan10.TenthActivity
 import com.example.aulia_core.Home.pertemuan2.SecondActivity
 import com.example.aulia_core.Home.pertemuan4.BlueMotivationActivity
 import com.example.aulia_core.Home.pertemuan4.DailyGlowActivity
@@ -71,6 +72,10 @@ class HomeFragment : Fragment() {
         }
         // =======================================================
 
+        // Button Pertemuan 10
+        binding.btnToTenth.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
+        }
         // Logout
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
