@@ -58,6 +58,9 @@ dependencies {
     // GridLayout
     implementation("androidx.gridlayout:gridlayout:1.0.0")
 
+    // Tambahkan RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
     // ========== TAMBAHKAN INI UNTUK GLIDE ==========
     // Glide untuk load gambar dari URL (Custom Adapter)
     implementation("com.github.bumptech.glide:glide:4.16.0")
