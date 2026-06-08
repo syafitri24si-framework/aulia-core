@@ -43,6 +43,13 @@
     <color name="accent">#64B5F6</color>
 
     <!-- ========================= -->
+    <!-- TAMBAHAN WARNA (TIDAK MENGHAPUS YANG LAMA) -->
+    <!-- ========================= -->
+    <color name="accent_gold">#FFC107</color>
+    <color name="accent_gold_dark">#FFA000</color>
+    <color name="accent_teal">#009688</color>
+
+    <!-- ========================= -->
     <!-- LOGIN COMPATIBILITY -->
     <!-- ========================= -->
     <color name="login_title">#1565C0</color>
@@ -53,9 +60,5 @@
     <color name="login_text">#1A1A1A</color>
     <color name="login_background">#FFFFFF</color>
     <color name="error_red">#FF0000</color>
-    <!-- ========================= -->
-    <!-- BASIC -->
-    <!-- ========================= -->
-
 
 </resources>
