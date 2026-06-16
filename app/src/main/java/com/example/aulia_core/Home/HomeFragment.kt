@@ -13,13 +13,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aulia_core.AuthActivity
 import com.example.aulia_core.Home.berita.BeritaAdapter
+import com.example.aulia_core.Home.pertemuan10.TenthActivity
 import com.example.aulia_core.Home.pertemuan2.SecondActivity
 import com.example.aulia_core.Home.pertemuan4.BlueMotivationActivity
 import com.example.aulia_core.Home.pertemuan4.DailyGlowActivity
 import com.example.aulia_core.Home.pertemuan5.WebViewActivity
 import com.example.aulia_core.Home.pertemuan7.SeventhActivity
 import com.example.aulia_core.Home.pertemuan9.NinthActivity
-import com.example.aulia_core.data.api.BeritaApiClient
 import com.example.aulia_core.data.api.CatFactApiClient
 import com.example.aulia_core.data.model.Article
 import com.example.aulia_core.data.model.Source
@@ -81,6 +81,11 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
 
+        // ========== TOMBOL PERTEMUAN 10 (LAYANAN DIGITAL + ROOM DATABASE) ==========
+        binding.btnPertemuan10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
+        }
+
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
                 .setTitle("Logout")
@@ -112,7 +117,6 @@ class HomeFragment : Fragment() {
     private fun loadBerita() {
         binding.progressBar.visibility = View.VISIBLE
 
-        // MOCK DATA BERITA DENGAN GAMBAR (PASTI MUNCUL)
         val mockArticles = listOf(
             Article(
                 source = Source(null, "Kompas.com"),

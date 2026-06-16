@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aulia_core">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,46 +12,71 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auliacore"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Home.berita.BeritaAdapter"
-            android:exported="false" />
+
         <!-- SPLASH SCREEN (LAUNCHER) -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- ONBOARDING ACTIVITY -->
+        </activity>
+
+        <!-- ONBOARDING -->
         <activity
             android:name=".onboarding.OnboardingActivity"
-            android:exported="false" /> <!-- AUTH LOGIN -->
+            android:exported="false" />
+
+        <!-- AUTH & REGISTER -->
         <activity
             android:name=".AuthActivity"
-            android:exported="false" /> <!-- REGISTRASI -->
+            android:exported="false" />
+
         <activity
             android:name=".RegistrasiActivity"
-            android:exported="false" /> <!-- BASE ACTIVITY -->
+            android:exported="false" />
+
+        <!-- BASE ACTIVITY -->
         <activity
             android:name=".BaseActivity"
-            android:exported="false" /> <!-- PERTEMUAN 2 -->
+            android:exported="false" />
+
+        <!-- PERTEMUAN 2 -->
         <activity
             android:name=".Home.pertemuan2.SecondActivity"
-            android:exported="false" /> <!-- PERTEMUAN 4 -->
+            android:exported="false" />
+
+        <!-- PERTEMUAN 4 -->
         <activity
             android:name=".Home.pertemuan4.BlueMotivationActivity"
-            android:exported="false" /> <!-- PERTEMUAN 5 -->
+            android:exported="false" />
+
+        <!-- PERTEMUAN 5 -->
         <activity
             android:name=".Home.pertemuan5.WebViewActivity"
-            android:exported="false" /> <!-- PERTEMUAN 7 -->
+            android:exported="false" />
+
+        <!-- PERTEMUAN 7 -->
         <activity
             android:name=".Home.pertemuan7.SeventhActivity"
-            android:exported="false" /> <!-- PERTEMUAN 9 -->
+            android:exported="false" />
+
+        <!-- PERTEMUAN 9 -->
         <activity
             android:name=".Home.pertemuan9.NinthActivity"
             android:exported="false" />
+
+        <!-- PERTEMUAN 10 (TAB LAYOUT) -->
+        <activity
+            android:name=".Home.pertemuan10.TenthActivity"
+            android:exported="false" />
+
+        <!-- ROOM DATABASE - FORM PENGAJUAN -->
+        <activity
+            android:name=".Home.pertemuan10.FormPengajuanLayananActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
