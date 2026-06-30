@@ -150,7 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnBinaDesa" />
 
-        <!-- ========== TOMBOL PERTEMUAN 10 (LAYANAN DIGITAL + ROOM DATABASE) ========== -->
+        <!-- ========== TOMBOL PERTEMUAN 10 ========== -->
         <Button
             android:id="@+id/btnPertemuan10"
             style="@style/Widget.Material3.Button"

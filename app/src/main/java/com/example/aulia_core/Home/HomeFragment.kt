@@ -1,5 +1,6 @@
 package com.example.aulia_core.Home
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -24,12 +26,23 @@ import com.example.aulia_core.data.api.CatFactApiClient
 import com.example.aulia_core.data.model.Article
 import com.example.aulia_core.data.model.Source
 import com.example.aulia_core.databinding.FragmentHomeBinding
+import com.example.aulia_core.onboarding.OnboardingActivity
+import com.example.aulia_core.utils.PermissionHelper
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                Toast.makeText(requireContext(), "Notifikasi diizinkan", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(requireContext(), "Notifikasi ditolak", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +55,17 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // ========== PERMISSION NOTIFIKASI ==========
+        if (PermissionHelper.isNotificationPermissionRequired()) {
+            val permission = Manifest.permission.POST_NOTIFICATIONS
+            if (!PermissionHelper.hasPermission(requireContext(), permission)) {
+                PermissionHelper.requestPermission(
+                    notificationPermissionLauncher,
+                    permission
+                )
+            }
+        }
 
         setupButtons()
         loadCatFact()
@@ -86,6 +110,7 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
+        // ========== LOGOUT KE ONBOARDING (BUKAN LOGIN) ==========
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
                 .setTitle("Logout")
@@ -94,7 +119,9 @@ class HomeFragment : Fragment() {
                     val sharedPref = requireContext().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
                     sharedPref.edit().clear().apply()
 
-                    val intent = Intent(requireContext(), AuthActivity::class.java)
+                    // KE ONBOARDING, BUKAN LOGIN
+                    val intent = Intent(requireContext(), OnboardingActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                     requireActivity().finish()
                 }

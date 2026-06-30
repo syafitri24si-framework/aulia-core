@@ -60,6 +60,7 @@ dependencies {
 
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.core:core-ktx:1.12.0")
 
     // ========== ROOM DATABASE ==========
     val room_version = "2.7.1"

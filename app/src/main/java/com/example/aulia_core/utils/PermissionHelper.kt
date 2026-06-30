@@ -1,0 +1,29 @@
+package com.example.aulia_core.utils
+
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import androidx.activity.result.ActivityResultLauncher
+import androidx.core.content.ContextCompat
+import android.os.Build
+
+object PermissionHelper {
+
+    fun hasPermission(context: Context, permission: String): Boolean {
+        return ContextCompat.checkSelfPermission(
+            context,
+            permission
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    fun requestPermission(
+        launcher: ActivityResultLauncher<String>,
+        permission: String
+    ) {
+        launcher.launch(permission)
+    }
+
+    fun isNotificationPermissionRequired(): Boolean {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+    }
+}

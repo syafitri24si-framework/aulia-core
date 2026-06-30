@@ -41,7 +41,7 @@ class TenthActivity : AppCompatActivity() {
                     badge.isVisible = true
                     badge.number = 6
                 }
-                3 -> {  // ← TAMBAHKAN INI
+                3 -> {
                     tab.text = "Status"
                     tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_report)
                     val badge = tab.getOrCreateBadge()
@@ -49,6 +49,12 @@ class TenthActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+
+        // ========== CEK INTENT UNTUK LANGSUNG KE TAB STATUS ==========
+        val openTab = intent.getIntExtra("OPEN_TAB", 0)
+        if (openTab == 3) {
+            binding.viewPager.currentItem = 3  // Langsung ke tab Status (index ke-3)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

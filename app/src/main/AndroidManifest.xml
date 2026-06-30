@@ -3,6 +3,9 @@
     package="com.example.aulia_core">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -32,7 +35,6 @@
         <activity
             android:name=".AuthActivity"
             android:exported="false" />
-
         <activity
             android:name=".RegistrasiActivity"
             android:exported="false" />
@@ -47,14 +49,28 @@
             android:name=".Home.pertemuan2.SecondActivity"
             android:exported="false" />
 
+        <!-- PERTEMUAN 3 (WELCOME & LOGIN) -->
+        <activity
+            android:name=".Home.pertemuan3.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan3.LoginActivity"
+            android:exported="false" />
+
         <!-- PERTEMUAN 4 -->
         <activity
             android:name=".Home.pertemuan4.BlueMotivationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan4.DailyGlowActivity"
             android:exported="false" />
 
         <!-- PERTEMUAN 5 -->
         <activity
             android:name=".Home.pertemuan5.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan5.FifthActivity"
             android:exported="false" />
 
         <!-- PERTEMUAN 7 -->
@@ -75,6 +91,11 @@
         <!-- ROOM DATABASE - FORM PENGAJUAN -->
         <activity
             android:name=".Home.pertemuan10.FormPengajuanLayananActivity"
+            android:exported="false" />
+
+        <!-- ==================== REMINDER RECEIVER ==================== -->
+        <receiver
+            android:name=".utils.ReminderReceiver"
             android:exported="false" />
 
     </application>
